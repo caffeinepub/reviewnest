@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay.woff2") format("woff2");
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm editorial palette — sage + amber */
+    --background: 0.97 0.01 80;
+    --foreground: 0.17 0.02 55;
+
+    --card: 0.995 0.005 75;
+    --card-foreground: 0.17 0.02 55;
+
+    --popover: 0.995 0.005 75;
+    --popover-foreground: 0.17 0.02 55;
+
+    /* Deep sage green */
+    --primary: 0.37 0.09 158;
+    --primary-foreground: 0.98 0.005 75;
+
+    /* Soft sage tint */
+    --secondary: 0.92 0.025 155;
+    --secondary-foreground: 0.32 0.07 155;
+
+    /* Warm amber accent */
+    --accent: 0.75 0.13 75;
+    --accent-foreground: 0.17 0.02 55;
+
+    --muted: 0.93 0.015 80;
+    --muted-foreground: 0.52 0.025 75;
+
+    --destructive: 0.55 0.18 27;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.88 0.02 80;
+    --input: 0.88 0.02 80;
+    --ring: 0.37 0.09 158;
+
+    --radius: 0.5rem;
+
+    /* Star gold */
+    --star: 0.78 0.15 72;
+
+    --chart-1: 0.37 0.09 158;
+    --chart-2: 0.75 0.13 75;
+    --chart-3: 0.62 0.12 30;
+    --chart-4: 0.55 0.1 200;
+    --chart-5: 0.7 0.08 310;
+
+    --sidebar: 0.93 0.015 80;
+    --sidebar-foreground: 0.17 0.02 55;
+    --sidebar-primary: 0.37 0.09 158;
+    --sidebar-primary-foreground: 0.98 0.005 75;
+    --sidebar-accent: 0.92 0.025 155;
+    --sidebar-accent-foreground: 0.32 0.07 155;
+    --sidebar-border: 0.88 0.02 80;
+    --sidebar-ring: 0.37 0.09 158;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-star {
+    color: oklch(var(--star));
+  }
+  .bg-star {
+    background-color: oklch(var(--star));
+  }
+}
